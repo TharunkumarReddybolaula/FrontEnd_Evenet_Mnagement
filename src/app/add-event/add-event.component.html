@@ -1,0 +1,60 @@
+<div class="form-container">
+  <h2>Add New Event</h2>
+  <form (ngSubmit)="addEvent()">
+
+    <!-- Course Title -->
+    <label for="courseTitle">Course Title</label>
+    <input type="text" id="courseTitle" placeholder="Enter Course Title"
+           [(ngModel)]="newEvent.courseTitle" name="courseTitle" required />
+
+    <!-- Dropdown for Topic -->
+    <label for="topicId">Select Topic</label>
+    <select id="topicId" [(ngModel)]="newEvent.topicId" name="topicId" required>
+      <option value="" disabled selected>Select a Topic</option>
+      <option *ngFor="let topic of topics" [value]="topic.topicId">
+        {{ topic.topicName }}
+      </option>
+    </select>
+
+    <!-- Dropdown for Location -->
+    <label for="locationId">Select Location</label>
+    <select id="locationId" [(ngModel)]="newEvent.locationId" name="locationId" required>
+      <option value="" disabled selected>Select a Location</option>
+      <option *ngFor="let location of locations" [value]="location.locationId">
+        {{ location.city }} - {{ location.state }}
+      </option>
+    </select>
+
+    <!-- Dropdown for Speaker -->
+    <label for="speakerId">Select Speaker</label>
+    <select id="speakerId" [(ngModel)]="newEvent.speakerId" name="speakerId" required>
+      <option value="" disabled selected>Select a Speaker</option>
+      <option *ngFor="let speaker of speakers" [value]="speaker.speakerId">
+        {{ speaker.name }}
+      </option>
+    </select>
+
+    <!-- Class Size -->
+    <label for="classSize">Class Size</label>
+    <input type="number" id="classSize" placeholder="Enter Class Size"
+           [(ngModel)]="newEvent.classSize" name="classSize" required />
+
+    <!-- Number of Days -->
+    <label for="numberOfDays">Number of Days</label>
+    <input type="number" id="numberOfDays" placeholder="Enter Number of Days"
+           [(ngModel)]="newEvent.numberOfDays" name="numberOfDays" required />
+
+    <!-- Start Date -->
+    <label for="startDate">Start Date</label>
+    <input type="date" id="startDate" placeholder="Select Start Date"
+           [(ngModel)]="newEvent.startDate" name="startDate" required />
+
+    <!-- End Date -->
+    <label for="endDate">End Date</label>
+    <input type="date" id="endDate" placeholder="Select End Date"
+           [(ngModel)]="newEvent.endDate" name="endDate" required />
+
+    <!-- Submit Button -->
+    <button type="submit">Add Event</button>
+  </form>
+</div>

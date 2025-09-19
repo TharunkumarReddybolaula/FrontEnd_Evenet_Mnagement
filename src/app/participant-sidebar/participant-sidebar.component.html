@@ -1,0 +1,27 @@
+<div class="participant-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">Participant</div>
+    <nav>
+      <ul>
+        <li>
+          <a routerLink="/participant/register" routerLinkActive="active">Register</a>
+        </li>
+        <li>
+          <a routerLink="/participant/update" routerLinkActive="active">Update</a>
+        </li>
+        <li>
+          <a routerLink="/participant/enroll" routerLinkActive="active">Enroll</a>
+        </li>
+        <li>
+          <a routerLink="/participant/feedback" routerLinkActive="active">Feedback</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Content -->
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

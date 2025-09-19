@@ -1,0 +1,67 @@
+.location-form {
+  background-color: #1a1a1a;
+  color: #f1c40f;
+  padding: 40px; /* increased */
+  border-radius: 12px;
+  width: 160%;
+  max-width: 600px; /* widened */
+  margin: 50px auto; /* increased */
+  box-shadow: 0 0 25px rgba(255,215,0,0.4);
+  font-family: 'Arial', sans-serif;
+}
+
+.location-form h2 {
+  text-align: center;
+  margin-bottom: 30px; /* increased */
+  font-size: 22px; /* increased */
+}
+
+.location-form form div {
+  margin-bottom: 20px; /* increased */
+}
+
+.location-form label {
+  display: block;
+  margin-bottom: 8px; /* increased */
+  font-weight: bold;
+  font-size: 16px; /* increased */
+}
+
+.location-form input,
+.location-form textarea {
+  width: 95%;
+  padding: 14px; /* increased */
+  border: 1px solid #333;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px; /* increased */
+}
+
+.location-form textarea {
+  resize: vertical;
+  min-height: 120px; /* increased */
+}
+
+.location-form input:focus,
+.location-form textarea:focus {
+  outline: none;
+  border-color: #f1c40f;
+}
+
+.location-form button {
+  width: 100%;
+  padding: 14px; /* increased */
+  background-color: #f1c40f;
+  color: #1a1a1a;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px; /* increased */
+  transition: background-color 0.3s ease;
+}
+
+.location-form button:hover {
+  background-color: #d4ac0d;
+}

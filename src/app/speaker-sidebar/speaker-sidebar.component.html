@@ -1,0 +1,21 @@
+<div class="speaker-layout">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2 class="logo"> Speaker</h2>
+    <nav>
+      <ul>
+        <li><a routerLink="register" routerLinkActive="active"> Register Speaker</a></li>
+        <li><a routerLink="events" routerLinkActive="active"> View Events</a></li>
+        <li><a routerLink="enroll"> Enroll Event</a></li>
+        <li><a routerLink="feedback" routerLinkActive="active"> View Feedback</a></li>
+        <li><a routerLink="/signin"> Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+
+  <!-- Main content -->
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

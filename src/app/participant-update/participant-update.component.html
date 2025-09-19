@@ -1,0 +1,44 @@
+<div class="page-container">
+  <form #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm)">
+    <h2>Update Participant</h2>
+
+    <div class="form-group">
+      <label for="participantId">Participant ID *</label>
+      <input id="participantId" name="participantId" type="number" [(ngModel)]="participant.participantId" required />
+      <div *ngIf="updateForm.submitted && !participant.participantId" class="error">
+        Participant ID is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Name *</label>
+      <input id="name" name="name" type="text" [(ngModel)]="participant.name" required />
+      <div *ngIf="updateForm.submitted && !participant.name" class="error">
+        Name is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email *</label>
+      <input id="email" name="email" type="email" [(ngModel)]="participant.email" required />
+      <div *ngIf="updateForm.submitted && !participant.email" class="error">
+        Valid email is required
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone *</label>
+      <input id="phone" name="phone" type="text" pattern="^[0-9]{10}$" [(ngModel)]="participant.phone" required />
+      <div *ngIf="updateForm.submitted && !participant.phone" class="error">
+        Phone number is required (10 digits)
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="updateForm.invalid || loading">
+      {{ loading ? 'Updating...' : 'Update Participant' }}
+    </button>
+  </form>
+
+  <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+</div>

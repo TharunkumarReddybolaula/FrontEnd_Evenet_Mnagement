@@ -1,0 +1,91 @@
+/* Page container styles */
+.page-container {
+  background: #1a1a1a; /* Dark background */
+  color: #ffd700; /* Yellow text */
+  padding: 20px;
+  border-radius: 12px; /* Rounded corners */
+  font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
+  max-width: 600px; /* Max width for the form */
+  margin: auto; /* Center the container */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6); /* Soft shadow */
+  border-left: 5px solid #2196f3; /* Blue accent border */
+}
+
+/* Heading style */
+.page-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: #ffd700; /* Golden color for the heading */
+}
+
+/* Form group container */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px; /* Space between fields */
+  gap: 10px; /* More gap between label and input */
+}
+
+/* Label styles */
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #ffd700; /* Golden color for labels */
+}
+
+/* Input field styles */
+.form-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+  background: #222; /* Dark background for inputs */
+  color: #fff; /* White text inside inputs */
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease; /* Smooth transition on focus */
+  width: 100%; /* Full width input fields */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+/* Input field focus state */
+.form-group input:focus {
+  border-color: #e6c200; /* Gold border when focused */
+  background: #1e1e1e; /* Darker background on focus */
+}
+
+/* Button styling */
+button {
+  background: #ffd700; /* Golden background */
+  color: #1a1a1a; /* Dark text on button */
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%; /* Full width button */
+  box-sizing: border-box; /* Ensures padding doesn't affect button width */
+}
+
+/* Button hover effect */
+button:hover {
+  background: #e6c200; /* Darker gold on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Success message styling */
+.success {
+  color: #4caf50; /* Green text for success message */
+  text-align: center;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+/* Error message styling */
+.error {
+  color: #ff4d4d; /* Red text for error message */
+  text-align: center;
+  margin-top: 12px;
+  font-weight: bold;
+}

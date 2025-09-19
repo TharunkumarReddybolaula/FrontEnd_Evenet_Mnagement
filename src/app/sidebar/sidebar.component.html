@@ -1,0 +1,77 @@
+<div class="sidebar-container">
+  <aside class="sidebar">
+    <h2 class="logo">Administrator Portal</h2>
+    <nav>
+      <ul>
+        <!-- Dashboard Link -->
+        <li><a routerLink="admin-dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Dashboard</a></li>
+
+        <!-- Admin -->
+        <li class="menu-item">
+          <a (click)="toggleMenu('admin')" href="javascript:void(0)" [class.active]="activeMenu === 'admin'">Admin</a>
+          <ul [class.open]="activeMenu === 'admin'">
+            <li><a routerLink="add-admin" routerLinkActive="active">Add Administrator</a></li>
+            <li><a routerLink="view-admin" routerLinkActive="active">View Administrators</a></li>
+          </ul>
+        </li>
+
+        <!-- Topics -->
+        <li class="menu-item">
+          <a (click)="toggleMenu('topics')" href="javascript:void(0)" [class.active]="activeMenu === 'topics'">Topics</a>
+          <ul [class.open]="activeMenu === 'topics'">
+            <li><a routerLink="add-topic" routerLinkActive="active">Create New Topic</a></li>
+            <li><a routerLink="modify-topic" routerLinkActive="active">Modify Topic</a></li>
+            <li><a routerLink="view-topics" routerLinkActive="active">View Topics</a></li>
+          </ul>
+        </li>
+
+        <!-- Events -->
+        <li class="menu-item">
+          <a (click)="toggleMenu('events')" href="javascript:void(0)" [class.active]="activeMenu === 'events'">Events</a>
+          <ul [class.open]="activeMenu === 'events'">
+            <li><a routerLink="add-event" routerLinkActive="active">Create New Event</a></li>
+            <li><a routerLink="modify-event" routerLinkActive="active">Modify Event</a></li>
+            <li><a routerLink="delete-event" routerLinkActive="active">Cancel Event</a></li>
+            <li><a routerLink="view-event" routerLinkActive="active">View Events</a></li>
+          </ul>
+        </li>
+
+        <!-- Speakers -->
+        <li class="menu-item">
+          <a (click)="toggleMenu('speaker')" href="javascript:void(0)" [class.active]="activeMenu === 'speaker'">Speakers</a>
+          <ul [class.open]="activeMenu === 'speaker'">
+            <li><a routerLink="add-speaker" routerLinkActive="active">Create Speaker</a></li>
+            <li><a routerLink="view-speaker" routerLinkActive="active">View Speakers</a></li>
+          </ul>
+        </li>
+
+        <!-- Location -->
+        <li class="menu-item">
+          <a (click)="toggleMenu('location')" href="javascript:void(0)" [class.active]="activeMenu === 'location'">Location</a>
+          <ul [class.open]="activeMenu === 'location'">
+            <li><a routerLink="add-location" routerLinkActive="active">Add Location</a></li>
+            <li><a routerLink="modify-location" routerLinkActive="active">Edit Location</a></li>
+            <li><a routerLink="view-location" routerLinkActive="active">View Locations</a></li>
+          </ul>
+        </li>
+
+        <!-- Promotion Code -->
+        <li class="menu-item">
+          <a (click)="toggleMenu('promocode')" href="javascript:void(0)" [class.active]="activeMenu === 'promocode'">Promotion Code</a>
+          <ul [class.open]="activeMenu === 'promocode'">
+            <li><a routerLink="create-promocode" routerLinkActive="active">Add Promotion Code</a></li>
+            <li><a routerLink="view-promocode" routerLinkActive="active">View Promotion Codes</a></li>
+          </ul>
+        </li>
+
+        <!-- Logout -->
+        <li><a routerLink="/signin">Logout</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main content -->
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>

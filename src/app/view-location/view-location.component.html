@@ -1,0 +1,20 @@
+<div class="location-form">
+  <h2>View Locations</h2>
+  <div *ngIf="locations.length === 0">No locations found.</div>
+  <table *ngIf="locations.length > 0">
+    <thead>
+      <tr>
+        <th>City</th>
+        <th>State</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let loc of locations">
+        <td>{{ loc.city }}</td>
+        <td>{{ loc.state }}</td>
+        <td>{{ loc.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

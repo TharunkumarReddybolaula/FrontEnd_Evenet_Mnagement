@@ -1,0 +1,30 @@
+<div class="promocode-delete">
+  <h2>Delete Promo Code</h2>
+
+  <!-- Info text -->
+  <p>Select a promo code from the list below to delete it.</p>
+
+  <!-- Promo Codes Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Valid From</th>
+        <th>Valid To</th>
+        <th>Discount (%)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let promo of promoList">
+        <td>{{ promo.code }}</td>
+        <td>{{ promo.validFrom }}</td>
+        <td>{{ promo.validTo }}</td>
+        <td>{{ promo.discountPercentage }}</td>
+        <td>
+          <button (click)="onDelete(promo)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,22 @@
+<div class="add-topic-container">
+  <h2>Add New Topic</h2>
+
+  <form class="topic-form" (ngSubmit)="onSubmit()">
+    <label>Topic Code *</label>
+    <input type="text" [(ngModel)]="topic.topicCode" name="topicCode" placeholder="Enter topic code" required />
+
+    <label>Topic Name *</label>
+    <input type="text" [(ngModel)]="topic.topicName" name="topicName" placeholder="Enter topic name" required />
+
+    <label>Category *</label>
+    <input type="text" [(ngModel)]="topic.category" name="category" placeholder="Enter category" required />
+
+    <label>Description</label>
+    <input type="text" [(ngModel)]="topic.description" name="description" placeholder="Enter description (optional)" />
+
+    <button type="submit">Add Topic</button>
+  </form>
+
+  <div class="success" *ngIf="successMessage">{{ successMessage }}</div>
+  <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

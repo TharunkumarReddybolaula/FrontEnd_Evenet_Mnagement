@@ -1,0 +1,20 @@
+<div class="location-form">
+  <h2>Delete Location</h2>
+  <div class="delete-panel">
+    <div *ngIf="locations.length > 0; else noLocations">
+      <div class="form-group">
+        <label for="locationSelect">Select Location to Delete</label>
+        <select id="locationSelect"
+                [(ngModel)]="selectedLocationId"
+                name="locationSelect">
+          <option value="">-- Select Location --</option>
+          <option *ngFor="let loc of locations" [value]="loc.locationId">{{ loc.city }}, {{ loc.state }}</option>
+        </select>
+      </div>
+      <button (click)="deleteLocation()" [disabled]="!selectedLocationId">Delete Selected Location</button>
+    </div>
+    <ng-template #noLocations>
+      <p>No locations found.</p>
+    </ng-template>
+  </div>
+</div>

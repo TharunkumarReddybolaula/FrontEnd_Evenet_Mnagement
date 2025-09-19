@@ -1,0 +1,39 @@
+<div class="view-event-container">
+  <h2>Events</h2>
+
+  <div *ngIf="loading" class="loading">Loading events...</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <table *ngIf="!loading && events.length > 0" class="event-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Course Title</th>
+        <th>Topic ID</th>
+        <th>Location ID</th>
+        <th>Speaker ID</th>
+        <th>Class Size</th>
+        <th>Number of Days</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ev of events">
+        <td>{{ ev.eventId }}</td>
+        <td>{{ ev.courseTitle }}</td>
+        <td>{{ ev.topicId }}</td>
+        <td>{{ ev.locationId }}</td>
+        <td>{{ ev.speakerId }}</td>
+        <td>{{ ev.classSize }}</td>
+        <td>{{ ev.numberOfDays }}</td>
+        <td>{{ ev.startDate | date:'mediumDate' }}</td>
+        <td>{{ ev.endDate | date:'mediumDate' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && events.length === 0" class="no-data">
+    No events found.
+  </div>
+</div>

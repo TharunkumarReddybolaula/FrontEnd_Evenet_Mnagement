@@ -1,0 +1,77 @@
+.page-container {
+  background: #1a1a1a;
+  color: #ffd700;
+  padding: 20px;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  border-left: 5px solid #2196f3; /* blue accent for Update */
+}
+
+.page-container h2 {
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #ffd700;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #ffd700;
+}
+
+.form-group input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ffd700;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #e6c200;
+  background: #1e1e1e;
+}
+
+button {
+  background: #ffd700;
+  color: #1a1a1a;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+}
+
+.success {
+  color: #4caf50;
+  text-align: center;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff4d4d;
+  text-align: center;
+  margin-top: 12px;
+  font-weight: bold;
+}

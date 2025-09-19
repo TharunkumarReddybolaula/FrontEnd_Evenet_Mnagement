@@ -1,0 +1,34 @@
+<div class="enroll-container">
+  <h2>Enroll in Events</h2>
+
+  <div *ngIf="loading">Loading events...</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+  <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+
+  <table *ngIf="events.length > 0" class="events-table">
+    <thead>
+      <tr>
+        <th>Event ID</th>
+        <th>Course Title</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let e of events">
+        <td>{{ e.eventId }}</td>
+        <td>{{ e.courseTitle }}</td>
+        <td>{{ e.startDate | date }}</td>
+        <td>{{ e.endDate | date }}</td>
+        <td>
+          <button (click)="enroll(e.eventId)" class="enroll-btn">Enroll</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && events.length === 0">
+    🎉 No events available to enroll.
+  </div>
+</div>

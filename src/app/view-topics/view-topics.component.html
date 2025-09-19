@@ -1,0 +1,29 @@
+<div class="view-topic-container">
+  <h2>All Topics</h2>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <table *ngIf="topics.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let topic of topics">
+        <td>{{ topic.topicId }}</td>
+        <td>{{ topic.topicCode }}</td>
+        <td>{{ topic.topicName }}</td>
+        <td>{{ topic.category }}</td>
+        <td>{{ topic.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && topics.length === 0">No topics found.</div>
+</div>

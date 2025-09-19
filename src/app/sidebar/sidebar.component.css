@@ -1,0 +1,153 @@
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #1a1a1a, #222222);
+  color: #ffd700;
+  height: 100vh;
+  padding: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-right: 4px solid transparent;
+  background-clip: padding-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  box-shadow: 3px 0 10px rgba(255, 215, 0, 0.2);
+  overflow: hidden;
+}
+ 
+.sidebar-container.collapsed .sidebar {
+  transform: translateX(-190px);
+}
+ 
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: linear-gradient(to bottom, #ffd700, #ffb700, #ffd700);
+}
+ 
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #ffd700;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+}
+ 
+.sidebar-container.collapsed .sidebar h2 {
+  opacity: 0;
+}
+ 
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: opacity 0.3s ease;
+}
+ 
+.sidebar-container.collapsed .sidebar ul {
+  opacity: 0;
+}
+ 
+.sidebar ul li {
+  margin-bottom: 15px;
+}
+ 
+.sidebar ul li a {
+  color: #ffd700;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  font-weight: 500;
+}
+ 
+.sidebar ul li a:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+  padding-left: 20px;
+}
+ 
+.sidebar ul li ul {
+  padding-left: 15px;
+  background-color: rgba(255, 215, 0, 0.05); /* Submenu background */
+  border-left: 2px solid rgba(255, 215, 0, 0.3); /* Submenu border */
+  border-radius: 5px;
+}
+ 
+.sidebar ul li ul li {
+  margin-bottom: 8px;
+}
+ 
+.sidebar ul li ul li a {
+  padding: 8px;
+  font-weight: 400;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: black;
+}
+ 
+.sidebar ul li ul li a:hover {
+  background-color: rgba(255, 215, 0, 0.2);
+  transform: translateX(5px);
+}
+ 
+.collapsed-tab {
+  position: fixed;
+  top: 20px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background-color: #1a1a1a;
+  color: #ffd700;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 3px 0 10px rgba(255, 215, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+ 
+.collapsed-tab:hover {
+  background-color: rgba(255, 215, 0, 0.1);
+}
+ 
+html {
+  scroll-behavior: smooth;
+}
+
+ /* Sidebar styling */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(to bottom, #1a1a1a, #222222); /* Black to dark gray gradient */
+  color: #ffd700; /* Yellow text */
+  height: 100vh; /* Full screen height */
+  padding: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-right: 4px solid transparent;
+  background-clip: padding-box;
+  position: fixed; /* Keeps the sidebar fixed on the left */
+  top: 0;
+  left: 0;
+  transition: transform 0.3s ease;
+  box-shadow: 3px 0 10px rgba(255, 215, 0, 0.2); /* Glow effect */
+  overflow-y: auto; /* Enable vertical scrolling in the sidebar */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding-right: 10px; /* Optional, to add space for scrollbar */
+}
+
+ 

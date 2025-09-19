@@ -1,0 +1,26 @@
+<div class="promocode-form">
+  <h2>Create New Promo Code</h2>
+  <form #promoForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="code">Promo Code</label>
+      <input type="text" id="code" name="code" [(ngModel)]="promo.code" required>
+    </div>
+
+    <div class="form-group">
+      <label for="validFrom">Valid From</label>
+      <input type="date" id="validFrom" name="validFrom" [(ngModel)]="promo.validFrom" required>
+    </div>
+
+    <div class="form-group">
+      <label for="validTo">Valid To</label>
+      <input type="date" id="validTo" name="validTo" [(ngModel)]="promo.validTo" required>
+    </div>
+
+    <div class="form-group">
+      <label for="discount">Discount Percentage</label>
+      <input type="number" id="discount" name="discount" [(ngModel)]="promo.discountPercentage" required>
+    </div>
+
+    <button type="submit">Add Promo Code</button>
+  </form>
+</div>

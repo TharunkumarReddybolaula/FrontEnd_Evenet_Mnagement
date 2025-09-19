@@ -1,0 +1,62 @@
+.form-container {
+  width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #1e1e1e; /* slightly lighter than #121212 for visibility */
+  color: gold;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* subtle glow to stand out */
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: gold;
+}
+
+form input {
+  display: block;
+  width: 95%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid gold;
+  background-color: #2a2a2a; /* darker input background for contrast */
+  color: gold;
+  font-size: 14px;
+}
+
+form input::placeholder {
+  color: #d4af37; /* lighter gold for placeholder */
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: gold;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #e6b800;
+}
+
+@media screen and (max-width: 500px) {
+  .form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  form input, form button {
+    width: 100%;
+  }
+}

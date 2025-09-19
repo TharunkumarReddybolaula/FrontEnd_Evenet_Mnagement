@@ -1,0 +1,27 @@
+<div class="view-speakers-container">
+  <h2>Speakers List</h2>
+
+  <!-- Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Key Skills</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let speaker of speakerList">
+        <td>{{ speaker.speakerId }}</td>
+        <td>{{ speaker.name }}</td>
+        <td>{{ speaker.email }}</td>
+        <td>{{ speaker.phone }}</td>
+        <td>{{ speaker.address }}</td>
+        <td>{{ speaker.keySkills }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

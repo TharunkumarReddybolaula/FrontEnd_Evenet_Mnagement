@@ -1,0 +1,29 @@
+<div class="view-container">
+  <h2>All Administrators</h2>
+
+  <div *ngIf="loading" class="loading">Loading...</div>
+  <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+
+  <table *ngIf="admins.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>UserId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let admin of admins">
+        <td>{{ admin.adminId }}</td>
+        <td>{{ admin.name }}</td>
+        <td>{{ admin.email }}</td>
+        <td>{{ admin.phone }}</td>
+        <td>{{ admin.userId }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && admins.length === 0">No administrators found.</div>
+</div>

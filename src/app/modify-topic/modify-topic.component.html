@@ -1,0 +1,32 @@
+<div class="modify-topic-container">
+  <h2>Modify Topic</h2>
+
+  <!-- Dropdown to choose topic -->
+  <label for="topicSelect">Select Topic</label>
+  <select id="topicSelect" [(ngModel)]="selectedTopicId" name="topicSelect" (change)="onTopicSelect()">
+    <option [ngValue]="null">-- Choose a topic --</option>
+    <option *ngFor="let t of topics" [ngValue]="t.topicId">
+      {{ t.topicName }} ({{ t.topicCode }})
+    </option>
+  </select>
+
+  <!-- Form only visible after selection -->
+  <form *ngIf="selectedTopicId" class="topic-form" (ngSubmit)="onSubmit()">
+    <label>Topic Code *</label>
+    <input type="text" [(ngModel)]="topic.topicCode" name="topicCode" required />
+
+    <label>Topic Name *</label>
+    <input type="text" [(ngModel)]="topic.topicName" name="topicName" required />
+
+    <label>Category *</label>
+    <input type="text" [(ngModel)]="topic.category" name="category" required />
+
+    <label>Description</label>
+    <input type="text" [(ngModel)]="topic.description" name="description" />
+
+    <button type="submit">Update Topic</button>
+  </form>
+
+  <div class="success" *ngIf="successMessage">{{ successMessage }}</div>
+  <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

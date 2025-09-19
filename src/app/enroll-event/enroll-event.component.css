@@ -1,0 +1,94 @@
+/* Reuse existing card style if needed */
+.enroll-container {
+  background: #1a1a1a;
+  color: #FFD700;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: center;
+  overflow-x: auto;
+}
+
+.enroll-container h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+/* Table Styles */
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.events-table th,
+.events-table td {
+  padding: 12px 15px;
+  border: 1px solid #FFD700;
+}
+
+.events-table th {
+  background-color: #333;
+  color: #FFD700;
+  font-weight: 700;
+}
+
+.events-table tr:nth-child(even) {
+  background-color: #222;
+}
+
+.events-table tr:hover {
+  background-color: #2c2c2c;
+}
+
+/* Enroll button */
+.enroll-btn {
+  background-color: #FFD700;
+  color: #1a1a1a;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.enroll-btn:hover {
+  background-color: #E6C200;
+}
+
+/* Success and Error Messages */
+.success {
+  color: #28a745;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+.error {
+  color: #ff4d4d;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .events-table th,
+  .events-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+  }
+
+  .enroll-btn {
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .enroll-container {
+    padding: 20px;
+  }
+}

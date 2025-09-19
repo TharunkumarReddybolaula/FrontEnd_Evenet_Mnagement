@@ -1,0 +1,24 @@
+<div class="form-container">
+  <h2>Delete Event</h2>
+
+  <!-- Step 1: Select Event -->
+  <label>Select Event to Delete</label>
+  <select [(ngModel)]="selectedEventId" name="selectedEventId" (change)="onSelectEvent()" required>
+    <option value="" disabled selected>Select an Event</option>
+    <option *ngFor="let e of events" [value]="e.eventId">{{ e.courseTitle }}</option>
+  </select>
+
+  <!-- Step 2: Show details and delete button -->
+  <div *ngIf="event">
+    <p><strong>Course Title:</strong> {{ event.courseTitle }}</p>
+    <p><strong>Topic ID:</strong> {{ event.topicId }}</p>
+    <p><strong>Location ID:</strong> {{ event.locationId }}</p>
+    <p><strong>Speaker ID:</strong> {{ event.speakerId }}</p>
+    <p><strong>Class Size:</strong> {{ event.classSize }}</p>
+    <p><strong>Number of Days:</strong> {{ event.numberOfDays }}</p>
+    <p><strong>Start Date:</strong> {{ event.startDate | date }}</p>
+    <p><strong>End Date:</strong> {{ event.endDate | date }}</p>
+
+    <button (click)="deleteEvent()">Delete Event</button>
+  </div>
+</div>

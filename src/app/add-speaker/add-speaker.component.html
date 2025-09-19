@@ -1,0 +1,38 @@
+<div class="add-speaker-container">
+  <h2>Add New Speaker</h2>
+
+  <form (ngSubmit)="onSubmit()" #speakerForm="ngForm" class="speaker-form">
+
+    <!-- Speaker Name -->
+    <label for="name">Name</label>
+    <input type="text" id="name" [(ngModel)]="speaker.name" name="name" required placeholder="Enter full name">
+
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input type="email" id="email" [(ngModel)]="speaker.email" name="email" required placeholder="Enter email">
+
+    <!-- Phone -->
+    <label for="phone">Phone</label>
+    <input type="text" id="phone" [(ngModel)]="speaker.phone" name="phone" required placeholder="Enter phone number">
+
+    <!-- Address -->
+    <label for="address">Address</label>
+    <input type="text" id="address" [(ngModel)]="speaker.address" name="address" required placeholder="Enter address">
+
+    <!-- Key Skills -->
+    <label for="keySkills">Key Skills</label>
+    <input type="text" id="keySkills" [(ngModel)]="speaker.keySkills" name="keySkills" placeholder="Optional">
+
+    <!-- Username -->
+    <label for="username">Username</label>
+    <input type="text" id="username" [(ngModel)]="username" name="username" required placeholder="Enter username">
+
+    <!-- Password -->
+    <label for="password">Password</label>
+    <input type="password" id="password" [(ngModel)]="password" name="password" required placeholder="Enter password">
+
+    <!-- Submit Button -->
+    <button type="submit">Add Speaker</button>
+
+  </form>
+</div>

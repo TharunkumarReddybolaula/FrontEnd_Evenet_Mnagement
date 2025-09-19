@@ -1,0 +1,58 @@
+.add-speaker-container {
+  background-color: #121212; /* slightly lighter black */
+  padding: 40px;
+  border-radius: 15px;
+  width: 600px;
+  margin: 20px auto;
+  color: #FFD700; /* gold text */
+   box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.add-speaker-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #FFD700;
+}
+
+.speaker-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.speaker-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.speaker-form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #FFD700;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 16px;
+}
+
+.speaker-form input::placeholder {
+  color: #ccc;
+}
+
+.speaker-form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: #FFD700;
+  color: #121212;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.speaker-form button:hover {
+  background-color: #e6c200;
+  transform: scale(1.05);
+}

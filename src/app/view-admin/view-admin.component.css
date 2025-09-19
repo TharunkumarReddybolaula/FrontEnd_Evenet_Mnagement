@@ -1,0 +1,40 @@
+.view-container {
+  width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  color: gold;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.loading, .error {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.error {
+  color: #ff4d4d;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid gold;
+}
+
+th {
+  background-color: #121212;
+}

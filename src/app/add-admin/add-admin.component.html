@@ -1,0 +1,11 @@
+<div class="form-container">
+  <h2>Add New Administrator</h2>
+  <form (ngSubmit)="addAdmin()">
+    <input type="text" placeholder="Name" [(ngModel)]="newAdmin.name" name="name" required />
+    <input type="email" placeholder="Email" [(ngModel)]="newAdmin.email" name="email" required />
+    <input type="text" placeholder="Phone" [(ngModel)]="newAdmin.phone" name="phone" required />
+    <input type="text" placeholder="Username" [(ngModel)]="username" name="username" required />
+    <input type="password" placeholder="Password" [(ngModel)]="password" name="password" required />
+    <button type="submit">Add Administrator</button>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+<div class="page-container">
+  <h2>Submit Feedback</h2>
+  <form (ngSubmit)="submit()">
+    
+    <!-- Dropdown for Event ID -->
+    <div class="form-group">
+      <label for="eventId">Event ID:</label>
+      <select [(ngModel)]="feedback.eventID" name="eventId" id="eventId" required>
+        <option value="" disabled>Select an Event</option>
+        <option *ngFor="let event of events" [value]="event.eventID">{{ event.eventName }}</option>
+      </select>
+    </div>
+
+    <!-- Dropdown for Speaker ID -->
+    <div class="form-group">
+      <label for="speakerId">Speaker ID:</label>
+      <select [(ngModel)]="feedback.speakerID" name="speakerId" id="speakerId" required>
+        <option value="" disabled>Select a Speaker</option>
+        <option *ngFor="let speaker of speakers" [value]="speaker.speakerID">{{ speaker.speakerName }}</option>
+      </select>
+    </div>
+
+    <!-- Feedback Remarks -->
+    <div class="form-group">
+      <label for="remarks">Feedback Remarks:</label>
+      <textarea [(ngModel)]="feedback.feedback_remarks" name="remarks" id="remarks" rows="4" placeholder="Enter your feedback here..." required></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">Submit Feedback</button>
+  </form>
+
+  <!-- Success/Error Message -->
+  <p *ngIf="message" [ngClass]="{ 'success': isSuccess, 'error': !isSuccess }">{{ message }}</p>
+</div>

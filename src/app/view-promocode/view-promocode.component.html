@@ -1,0 +1,28 @@
+<div class="promocode-view">
+  <h2>Promo Codes</h2>
+
+  <!-- Add Button -->
+  <div class="top-actions">
+    <button routerLink="/create-promocode">Add New Promo Code</button>
+  </div>
+
+  <!-- Promo Codes Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Valid From</th>
+        <th>Valid To</th>
+        <th>Discount (%)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let promo of promoList">
+        <td>{{ promo.code }}</td>
+        <td>{{ promo.validFrom }}</td>
+        <td>{{ promo.validTo }}</td>
+        <td>{{ promo.discountPercentage }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

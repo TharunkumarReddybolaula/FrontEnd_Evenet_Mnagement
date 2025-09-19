@@ -1,0 +1,28 @@
+<div class="location-form">
+  <h2>Modify Location</h2>
+
+  <!-- Location Modification Form -->
+  <form (ngSubmit)="onSubmit()" #locationForm="ngForm">
+    
+    <!-- City Input -->
+    <div>
+      <label for="city">City:</label>
+      <input type="text" id="city" [(ngModel)]="location.city" name="city" required />
+    </div>
+
+    <!-- State Input -->
+    <div>
+      <label for="state">State:</label>
+      <input type="text" id="state" [(ngModel)]="location.state" name="state" required />
+    </div>
+
+    <!-- Description Input -->
+    <div>
+      <label for="description">Description:</label>
+      <textarea id="description" [(ngModel)]="location.description" name="description"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" [disabled]="!locationForm.valid">Update Location</button>
+  </form>
+</div>
